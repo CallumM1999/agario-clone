@@ -1,0 +1,117 @@
+.modal {
+    position: fixed;
+
+    width: 800px;
+    max-width: 90%;
+
+    height: 600px;
+    max-height: 90%;
+
+    background-color: $color-white-main;
+
+   
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    overflow: hidden;
+
+    .modal-title {
+        font-weight: 600;
+        font-size: 3.4rem;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #ddd;
+    }
+
+    .modal-row {
+        width: calc(100% - 20px);
+        max-width: 600px;
+        padding: 0 10px;
+        text-align: center;
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        label, input {
+            font-weight: 100;
+            flex-grow: 1;
+
+            max-width: 100%;
+        }
+
+        label {
+            line-height: 50px;
+            font-size: 2rem;
+            text-transform: capitalize;
+
+        }
+        input {
+            border: none;
+            border-bottom: 2px solid #444;
+            height: 30px;
+            outline: none;
+            color: #666;
+            font-size: 1.6rem;
+            padding: 0 5px;
+
+            margin-top: 10px;
+        }
+        .modal-error {
+            color: $color-red;
+            font-size: 1.6rem;
+        }
+    }
+
+    button {
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+
+        font-size: 1.8rem;
+        padding: 10px;
+        font-weight: 200;
+
+        background-color: $color-green;
+        outline-color: $color-grey;
+    }
+
+    &-background {
+        &-top {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 30%;
+            z-index: -1;
+
+            background-color: $color-blue;
+            clip-path: polygon(0% 70%, 100% 100%, 100% 0%, 0% 0%);
+            
+        }
+        &-bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10%;
+
+            background-color: $color-orange;
+            clip-path: polygon(0% 100%, 100% 100%, 100% 80%, 0% 0%);
+
+        }
+    }
+    border-radius: 5px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.hide {
+    transition: all .1s;
+    width: 0 !important;
+
+    input {
+        display: none !important;
+    }
+}

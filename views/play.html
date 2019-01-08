@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        #chat {
+            /* display: none !important; */
+        }
+    </style>
+
+</head>
+<body onload="setCanvasSize()">
+    <canvas id="gameArea"  width="10000px" height="10000px"></canvas>
+
+    <div id="leaderboard">
+        <h2>leaderboard</h2>
+        <ol>
+            <!-- <li>Player</li>
+            <li>Player</li>
+            <li>Player</li>
+            <li>Player</li>
+            <li>Player</li>
+            <li>Player</li>
+            <li>Player</li>
+            <li>Player</li>
+            <li>Player</li>
+            <li>Player</li> -->
+        </ol>
+    </div>
+
+    <div id="chat">
+        <div class="output"></div>
+        <div class="input">
+            <div class="input-container hide">
+                <input type="text" name="input" id="">
+            </div>
+            <div class="toggle"></div>
+        </div>
+    </div>
+
+    <div id="score">
+        <span>score</span>
+        <span class="data">0</span>
+    </div>
+
+    <div class="modal hide" id="modal-menu">
+        <div class="modal-title">Options</div>
+    </div>
+
+</body>
+
+<script>
+    function setCanvasSize() {
+        const canvas = document.querySelector('canvas#gameArea');
+        canvas.width = document.documentElement.clientWidth;
+        canvas.height =document.documentElement.clientHeight;
+    }
+</script>
+<script src="js/bundle.js"></script>
+</html>

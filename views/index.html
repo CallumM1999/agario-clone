@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="modal" id="modal-start">
+        <div class="modal-background-top"></div>
+        <div class="modal-background-bottom"></div>
+
+        <h1 class="modal-title">Not agario</h1>
+
+        <div class="modal-row" id="modal-row-1">
+            <label for="modal-start-input-name">name</label>
+            <input type="text" name="name" id="modal-start-input-name" placeholder="type here">
+        </div>
+        <div class="modal-row" id="modal-row-2">
+            <div class="modal-error"></div>
+            <button id="modal-start-btn-join" onclick="clickJoin()">Join</button>
+        </div>
+
+        <button id="modal-start-btn-about">About</button>
+
+
+    </div>
+
+    <script>
+        function clickJoin() {
+            const input = document.querySelector('#modal-start-input-name');
+            const error = document.querySelector('.modal-error');
+            const name = input.value;
+
+            if (name === '') {
+                error.innerHTML = 'please ener a valid name';
+            } else {
+                error.innerHTML = '';
+                window.location = `/play?name=${name}`;
+            }
+
+        }
+    </script>
+</body>
+</html>

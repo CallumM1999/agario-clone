@@ -1,0 +1,31 @@
+{
+  "name": "agario-clone-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "start-watch": "nodemon server/server.js",
+    "css": "node-sass dev/scss/main.scss public/css/main.css",
+    "css-watch": "node-sass dev/scss/main.scss public/css/main.css --watch",
+    "webpack": "npx webpack --config webpack.conf.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jshint": "^2.9.6",
+    "node-sass": "^4.9.3",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.3",
+    "express": "^4.16.3",
+    "express.io": "^1.1.13",
+    "socket.io": "^2.1.1",
+    "socketio": "^1.0.0",
+    "webpack": "^4.19.1"
+  },
+  "engines": {
+    "node": "8.10.0"
+  }
+}
